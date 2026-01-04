@@ -1,4 +1,5 @@
 import express, { type Request, type Response } from "express";
+import initDB from "./config/db";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
+initDB();
 //404 Handler
 app.use((req: Request, res: Response) => {
   res.status(404).json({
