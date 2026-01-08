@@ -6,6 +6,11 @@
 http://localhost:8000/api/v1
 ```
 
+## Live link
+
+2nd-assignment-redwan-hasans-projects.vercel.app
+2nd-assignment-redwanhasan07208212-redwan-hasans-projects.vercel.app
+
 ## Technology Stack
 
 - **Language:** TypeScript
