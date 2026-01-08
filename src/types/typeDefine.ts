@@ -76,3 +76,25 @@ export interface CreateBooking {
 export interface UpdateBooking {
   status: "active" | "cancelled" | "returned";
 }
+
+export interface JwtPayload {
+  id: number;
+  email: string;
+  role: "admin" | "customer";
+}
+
+// Response Types
+export interface ApiResponse<T> {
+  success: boolean;
+  message: string;
+  data?: T;
+  statusCode?: number;
+}
+
+// Error Types
+export interface ErrorResponse {
+  success: false;
+  message: string;
+  statusCode: number;
+  errorCode?: string;
+}
