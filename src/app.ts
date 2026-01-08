@@ -1,6 +1,7 @@
 import express, { type Request, type Response } from "express";
 import initDB from "./config/db";
 import { AuthRoutes } from "./modules/auth/auth.routes";
+import { errorHandler } from "./middleware/errorHandler";
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get("/", (req: Request, res: Response) => {
 initDB();
 
 app.use("/api/v1/auth", AuthRoutes);
+
 //404 Handler
 app.use((req: Request, res: Response) => {
   res.status(404).json({
@@ -27,5 +29,8 @@ app.use((req: Request, res: Response) => {
     statusCode: 404,
   });
 });
+
+// errorHandler
+app.use(errorHandler);
 
 export default app;
