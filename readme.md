@@ -9,8 +9,12 @@ http://localhost:8000/api/v1
 ## Live link
 
 ```
+Inspect: https://vercel.com/redwan-hasans-projects/2nd-assignment/GN5efUMBpFVwgpsUDzKFS7S7PuSE
+Domain:
+
 2nd-assignment-redwan-hasans-projects.vercel.app
 2nd-assignment-redwanhasan07208212-redwan-hasans-projects.vercel.app
+
 ```
 
 ## Technology Stack
