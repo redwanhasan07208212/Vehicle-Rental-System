@@ -4,6 +4,7 @@ import { AuthRoutes } from "./modules/auth/auth.routes";
 import { errorHandler } from "./middleware/errorHandler";
 import { vehicleRoutes } from "./modules/vehicles/vehicle.routes";
 import { userRoutes } from "./modules/users/user.routes";
+import { BookingRoutes } from "./modules/bookings/booking.routes";
 
 const app = express();
 
@@ -23,6 +24,7 @@ initDB();
 app.use("/api/v1/auth", AuthRoutes);
 app.use("/api/v1/vehicles", vehicleRoutes);
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/bookings", BookingRoutes);
 
 //404 Handler
 app.use((req: Request, res: Response) => {
