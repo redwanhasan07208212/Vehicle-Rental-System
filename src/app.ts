@@ -2,6 +2,7 @@ import express, { type Request, type Response } from "express";
 import initDB from "./config/db";
 import { AuthRoutes } from "./modules/auth/auth.routes";
 import { errorHandler } from "./middleware/errorHandler";
+import { vehicleRoutes } from "./modules/vehicles/vehicle.routes";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get("/", (req: Request, res: Response) => {
 initDB();
 
 app.use("/api/v1/auth", AuthRoutes);
+app.use("/api/v1/vehicles", vehicleRoutes);
 
 //404 Handler
 app.use((req: Request, res: Response) => {
