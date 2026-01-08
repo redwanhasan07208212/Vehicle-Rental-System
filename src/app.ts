@@ -3,6 +3,7 @@ import initDB from "./config/db";
 import { AuthRoutes } from "./modules/auth/auth.routes";
 import { errorHandler } from "./middleware/errorHandler";
 import { vehicleRoutes } from "./modules/vehicles/vehicle.routes";
+import { userRoutes } from "./modules/users/user.routes";
 
 const app = express();
 
@@ -21,6 +22,7 @@ initDB();
 
 app.use("/api/v1/auth", AuthRoutes);
 app.use("/api/v1/vehicles", vehicleRoutes);
+app.use("/api/v1/users", userRoutes);
 
 //404 Handler
 app.use((req: Request, res: Response) => {

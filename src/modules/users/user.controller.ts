@@ -81,3 +81,10 @@ const deleteUser = async (req: Request, res: Response) => {
     });
   }
 };
+
+export const userController = {
+  getAllUsers,
+  getUserById,
+  updateUser,
+  deleteUser,
+};
